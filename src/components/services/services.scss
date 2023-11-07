@@ -1,0 +1,172 @@
+@import '../../app.scss';
+
+.services{
+   background: linear-gradient(180deg, #0c0c1d, #111132);
+   height: 100vh;
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+
+   .textContainer{
+      flex: 1;
+      align-self: flex-end;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @include tablet {
+         align-self: center;
+         text-align: center;
+         flex-direction: column;
+      }
+
+      hr{
+         width: 400px;
+         border: none;
+         border-top: 0.5px solid gray;
+
+         @include tablet {
+            display: none;
+         }
+      }
+
+      p{
+         font-weight: 300;
+         font-size: 20px;
+         color: gray;
+         text-align: right;
+
+         @include tablet {
+            display: none;
+         }
+      }
+   }
+
+   .titleContainer{
+      flex: 2;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      @include tablet {
+         width: 100%;
+      }
+      
+      .title{
+         display: flex;
+         gap: 40px;
+         align-items: center;
+
+         @include tablet {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+         }
+
+         img{
+            width: 200px;
+            height: 80px;
+            border-radius: 50px;
+            object-fit: cover;
+
+            @include tablet {
+               display: none;
+            }
+         }
+
+         h1{
+            font-size: 80px;
+            font-weight: 100;
+
+            @include tablet{
+               font-size: 36px;
+            }
+         }
+
+         button{
+            width: 200px;
+            height: 80px;
+            border-radius: 50px;
+            background-color: orange;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+
+            @include tablet{
+               font-size: 15px;
+               font-weight: 500;
+               height: 50px;
+               width: 150px;
+            }
+         }
+      }
+   }
+
+   .listContainer{
+      flex: 2;
+      display: flex;
+      max-width: 1300px;
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+
+      @include tablet {
+         flex-direction: column;
+         width: 100%;
+      }
+
+      #slider {
+         flex: 1;
+         width: 100%;
+         height: 100%;
+         overflow-x: scroll;
+         white-space: nowrap;
+         scroll-behavior: smooth;
+         scrollbar-width: none;
+         position: relative;
+         display: flex;
+         // justify-items: center;
+         align-items: center;
+
+         @include tablet {
+            bottom: 42%;
+            padding: 0 65px;
+         }
+
+         .box{
+            padding: 40px 50px 40px 50px;
+            width: 100vw;
+            border: 0.5px solid gray;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 20px 20px 20px;
+            border-radius: 15px;
+            
+            @include tablet {
+               width: 100vw;
+               gap: 20px;
+            }
+
+            h2{
+               font-size: 30px;
+   
+               @include tablet{
+                  font-size: 20px;
+               }
+            }
+   
+            img{
+               height: 100px;
+               width: 100px;
+
+               @include tablet{
+                  height: 150px;
+                  width: 150px;
+               }
+            }
+         }
+      }
+   }
+}
